@@ -1,23 +1,23 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "example/version"
+require "tomo/plugin/nvm/version"
 require "English"
 
 Gem::Specification.new do |spec|
-  spec.name          = "example"
-  spec.version       = Example::VERSION
-  spec.authors       = ["Example Owner"]
-  spec.email         = ["owner@example.com"]
+  spec.name          = "tomo-plugin-nvm"
+  spec.version       = Tomo::Plugin::Nvm::VERSION
+  spec.authors       = ["Matt Brictson"]
+  spec.email         = ["opensource@mattbrictson.com"]
 
   spec.summary       = ""
-  spec.homepage      = "https://github.com/mattbrictson/gem"
+  spec.homepage      = "https://github.com/mattbrictson/tomo-plugin-nvm"
   spec.license       = "MIT"
 
   spec.metadata = {
-    "bug_tracker_uri" => "https://github.com/mattbrictson/gem/issues",
-    "changelog_uri" => "https://github.com/mattbrictson/gem/releases",
-    "source_code_uri" => "https://github.com/mattbrictson/gem",
-    "homepage_uri" => "https://github.com/mattbrictson/gem"
+    "bug_tracker_uri" => "https://github.com/mattbrictson/tomo-plugin-nvm/issues",
+    "changelog_uri" => "https://github.com/mattbrictson/tomo-plugin-nvm/releases",
+    "source_code_uri" => "https://github.com/mattbrictson/tomo-plugin-nvm",
+    "homepage_uri" => "https://github.com/mattbrictson/tomo-plugin-nvm"
   }
 
   # Specify which files should be added to the gem when it is released.
