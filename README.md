@@ -5,25 +5,62 @@
 [![Circle](https://circleci.com/gh/mattbrictson/tomo-plugin-nvm.svg?style=shield)](https://circleci.com/gh/mattbrictson/tomo-plugin-nvm)
 [![Code Climate](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm/badges/gpa.svg)](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm)
 
-TODO: Description of this gem goes here.
+This is a [tomo](https://github.com/mattbrictson/tomo) plugin to manage node and yarn via nvm (instead of using the [nodenv tasks](https://tomo-deploy.com/plugins/nodenv/) that are built into tomo).
 
 ---
 
-- [Quick start](#quick-start)
+- [Installation](#installation)
 - [Support](#support)
 - [License](#license)
 - [Code of conduct](#code-of-conduct)
 - [Contribution guide](#contribution-guide)
 
-## Quick start
+## Installation
+
+Run:
 
 ```
 $ gem install tomo-plugin-nvm
 ```
 
+Or add it to your Gemfile:
+
 ```ruby
-require "tomo/plugin/nvm"
+gem "tomo-plugin-nvm"
 ```
+
+Then add the following to `.tomo/config.rb`:
+
+```ruby
+plugin "nvm"
+
+set nvm_node_version: "10.16.0" # required
+set nvm_yarn_version: "1.16.0"  # optional
+
+setup do
+  # Place this task before any steps that require node/yarn
+  run "nvm:install"
+end
+```
+
+## Settings
+
+| Name               | Purpose                                      | Default     |
+| ------------------ | -------------------------------------------- | ----------- |
+| `bashrc_path`      | Location of the deploy user’s `.bashrc` file | `".bashrc"` |
+| `nvm_version`      | Version of nvm to install                    | `"0.34.0"`  |
+| `nvm_node_version` | Version of node to install                   | `nil`       |
+| `nvm_yarn_version` | Version of yarn to install                   | `nil`       |
+
+## Tasks
+
+### nvm:install
+
+Installs nvm, uses nvm to install node, and makes the desired version of node the global default version for the deploy user. During installation, the user’s bashrc file is modified so that nvm is automatically loaded for interactive and non-interactive shells.
+
+You must supply a value for the `nvm_node_version` setting for this task to work. If the `nvm_yarn_version` setting is specified, yarn is also installed globally via npm. This setting is optional.
+
+`nvm:install` is intended for use as a [setup](https://tomo-deploy.com/commands/setup/) task.
 
 ## Support
 
