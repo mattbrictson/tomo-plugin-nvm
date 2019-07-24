@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Matt Brictson"]
   spec.email         = ["opensource@mattbrictson.com"]
 
-  spec.summary       = ""
+  spec.summary       = "A tomo plugin to manage node and yarn via nvm"
   spec.homepage      = "https://github.com/mattbrictson/tomo-plugin-nvm"
   spec.license       = "MIT"
 

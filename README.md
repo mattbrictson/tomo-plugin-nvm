@@ -5,11 +5,13 @@
 [![Circle](https://circleci.com/gh/mattbrictson/tomo-plugin-nvm.svg?style=shield)](https://circleci.com/gh/mattbrictson/tomo-plugin-nvm)
 [![Code Climate](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm/badges/gpa.svg)](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm)
 
-This is a [tomo](https://github.com/mattbrictson/tomo) plugin to manage node and yarn via nvm (instead of using the [nodenv tasks](https://tomo-deploy.com/plugins/nodenv/) that are built into tomo).
+This is a [tomo](https://github.com/mattbrictson/tomo) plugin to manage node and yarn via nvm (instead of using the [nodenv tasks](https://tomo-deploy.com/plugins/nodenv/) that are built into tomo). The `nvm:install` task is a drop-in replacement for tomo’s `nodenv:install` task.
 
 ---
 
 - [Installation](#installation)
+- [Settings](#settings)
+- [Tasks](#tasks)
 - [Support](#support)
 - [License](#license)
 - [Code of conduct](#code-of-conduct)
