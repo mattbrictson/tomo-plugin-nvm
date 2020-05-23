@@ -16,8 +16,7 @@ module Tomo::Plugin::Nvm
       require_setting :nvm_version
 
       nvm_version = settings[:nvm_version]
-      install_url = "https://raw.githubusercontent.com/creationix/nvm/"\
-                    "v#{nvm_version}/install.sh"
+      install_url = "https://raw.githubusercontent.com/creationix/nvm/v#{nvm_version}/install.sh"
       remote.run("curl -o- #{install_url.shellescape} | bash")
     end
 
@@ -36,9 +35,7 @@ module Tomo::Plugin::Nvm
       require_setting :nvm_node_version
       node_version = settings[:nvm_node_version]
 
-      unless node_installed?(node_version)
-        remote.run "nvm", "install", node_version
-      end
+      remote.run "nvm", "install", node_version unless node_installed?(node_version)
       remote.run "nvm", "alias", "default", node_version
     end
 
