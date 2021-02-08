@@ -1,7 +1,6 @@
 # tomo-plugin-nvm
 
 [![Gem Version](https://badge.fury.io/rb/tomo-plugin-nvm.svg)](https://rubygems.org/gems/tomo-plugin-nvm)
-[![Travis](https://img.shields.io/travis/com/mattbrictson/tomo-plugin-nvm.svg?label=travis)](https://travis-ci.com/github/mattbrictson/tomo-plugin-nvm)
 [![Circle](https://circleci.com/gh/mattbrictson/tomo-plugin-nvm/tree/main.svg?style=shield)](https://app.circleci.com/pipelines/github/mattbrictson/tomo-plugin-nvm?branch=main)
 [![Code Climate](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm/badges/gpa.svg)](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm)
 
