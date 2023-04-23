@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary = "A tomo plugin to manage node and yarn via nvm"
   spec.homepage = "https://github.com/mattbrictson/tomo-plugin-nvm"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6"
+  spec.required_ruby_version = ">= 3.0"
 
   spec.metadata = {
     "bug_tracker_uri" => "https://github.com/mattbrictson/tomo-plugin-nvm/issues",
