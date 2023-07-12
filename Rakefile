@@ -56,10 +56,9 @@ namespace :bump do
   end
 
   task :ruby do
-    replace_in_file "tomo-plugin-nvm.gemspec", /ruby_version = .*">= (.*)"/ => RubyVersions.lowest_supported
-    replace_in_file ".rubocop.yml", /TargetRubyVersion: (.*)/ => RubyVersions.lowest_supported
-    replace_in_file ".github/workflows/ci.yml", /ruby-version: "([\d.]+)"/ => RubyVersions.latest
-    replace_in_file ".github/workflows/ci.yml", /ruby: (\[.+\])/ => RubyVersions.all_supported.inspect
+    replace_in_file "tomo-plugin-nvm.gemspec", /ruby_version = .*">= (.*)"/ => RubyVersions.lowest
+    replace_in_file ".rubocop.yml", /TargetRubyVersion: (.*)/ => RubyVersions.lowest
+    replace_in_file ".github/workflows/ci.yml", /ruby: (\[.+\])/ => RubyVersions.all.inspect
   end
 
   task :year do
@@ -87,17 +86,14 @@ end
 
 module RubyVersions
   class << self
-    def lowest_supported
-      all_supported.first[/\d+\.\d+/]
+    def lowest
+      all.first
     end
 
-    def latest
-      all_supported.last
-    end
-
-    def all_supported
+    def all
       patches = versions.values_at(:stable, :security_maintenance).compact.flatten
-      patches.map { |p| p[/\d+\.\d+/] }.sort_by(&:to_f)
+      sorted_minor_versions = patches.map { |p| p[/\d+\.\d+/] }.sort_by(&:to_f)
+      [*sorted_minor_versions, "head"]
     end
 
     private
