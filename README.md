@@ -3,7 +3,7 @@
 [![Gem Version](https://img.shields.io/gem/v/tomo-plugin-nvm)](https://rubygems.org/gems/tomo-plugin-nvm)
 [![Gem Downloads](https://img.shields.io/gem/dt/tomo-plugin-nvm)](https://www.ruby-toolbox.com/projects/tomo-plugin-nvm)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/mattbrictson/tomo-plugin-nvm/ci.yml)](https://github.com/mattbrictson/tomo-plugin-nvm/actions/workflows/ci.yml)
-[![Code Climate](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm/badges/gpa.svg)](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm)
+[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/mattbrictson/tomo-plugin-nvm)](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm)
 
 This is a [tomo](https://github.com/mattbrictson/tomo) plugin to manage node and yarn via nvm (instead of using the [nodenv tasks](https://tomo-deploy.com/plugins/nodenv/) that are built into tomo). The `nvm:install` task is a drop-in replacement for tomo’s `nodenv:install` task.
 
