@@ -5,7 +5,7 @@
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/mattbrictson/tomo-plugin-nvm/ci.yml)](https://github.com/mattbrictson/tomo-plugin-nvm/actions/workflows/ci.yml)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/mattbrictson/tomo-plugin-nvm)](https://codeclimate.com/github/mattbrictson/tomo-plugin-nvm)
 
-This is a [tomo](https://github.com/mattbrictson/tomo) plugin to manage node and yarn via nvm (instead of using the [nodenv tasks](https://tomo-deploy.com/plugins/nodenv/) that are built into tomo). The `nvm:install` task is a drop-in replacement for tomo’s `nodenv:install` task.
+This is a [tomo](https://github.com/mattbrictson/tomo) plugin to manage node and yarn via nvm (instead of using the [nodenv tasks](https://tomo.mattbrictson.com/plugins/nodenv/) that are built into tomo). The `nvm:install` task is a drop-in replacement for tomo’s `nodenv:install` task.
 
 ---
 
@@ -62,7 +62,7 @@ Installs nvm, uses nvm to install node, and makes the desired version of node th
 
 You must supply a value for the `nvm_node_version` setting for this task to work. If the `nvm_yarn_version` setting is specified, yarn is also installed globally via npm. This setting is optional.
 
-`nvm:install` is intended for use as a [setup](https://tomo-deploy.com/commands/setup/) task.
+`nvm:install` is intended for use as a [setup](https://tomo.mattbrictson.com/commands/setup/) task.
 
 ## Support
 
