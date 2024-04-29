@@ -76,6 +76,6 @@ class Tomo::Plugin::Nvm::TasksTest < Minitest::Test
   private
 
   def configure(settings={})
-    Tomo::Testing::MockPluginTester.new("nvm", settings: settings)
+    Tomo::Testing::MockPluginTester.new("nvm", settings:)
   end
 end
