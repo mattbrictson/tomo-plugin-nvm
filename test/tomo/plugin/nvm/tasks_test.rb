@@ -1,6 +1,4 @@
-require "test_helper"
-
-class Tomo::Plugin::Nvm::TasksTest < Minitest::Test
+class Tomo::Plugin::Nvm::TasksTest < Tomo::Plugin::Nvm::Test
   def test_install_modifies_bashrc
     bashrc = <<~SH
       # example bashrc
